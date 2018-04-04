@@ -1,0 +1,17 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: stats
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+sidecar:
+  port: 8080
+  health-uri: http://localhost:8080/health
+
+logging:
+  level:
+    root: DEBUG

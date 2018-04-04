@@ -1,0 +1,236 @@
+<sidebar></sidebar>
+<div class="main-panel">
+  <navbar></navbar>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-nav-tabs">
+            <div class="card-header" data-background-color="purple">
+              <div class="nav-tabs-navigation">
+                <div class="nav-tabs-wrapper">
+                  <span class="nav-tabs-title">Tasks:</span>
+                  <ul class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active">
+                      <a href="#common" data-toggle="tab">
+                        <i class="material-icons">bug_report</i> Bugs
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#tutorWorkExperience" data-toggle="tab">
+                        <i class="material-icons">code</i> Website
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#student" data-toggle="tab">
+                        <i class="material-icons">cloud</i> Server
+                        <div class="ripple-container"></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-content">
+              <form [formGroup]="addUserForm" novalidate>
+              <div class="tab-content">
+                <div class="tab-pane active" id="common">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">First name</label>
+                        <input type="text" class="form-control" formControlName="firstname">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Last name</label>
+                        <input type="text" class="form-control" formControlName="lastname">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Email address</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
+                        {{rolesDropDown}}
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li *ngFor="let r of roles"><a (click)="onRolesDropDownSelect(r.roleName)">{{r.roleName}}</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Skype</label>
+                        <input type="email" class="form-control" formControlName="skypeId">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Gtalk</label>
+                        <input type="email" class="form-control" formControlName="gtalk">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Address</label>
+                        <input type="text" class="form-control">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-group label-floating is-empty">
+                          <label class="control-label">Description</label>
+                          <textarea class="form-control" rows="5" formControlName="gtalk"></textarea>
+                          <span class="material-input"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tutorWorkExperience">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="form-control" formControlName="title">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Organization</label>
+                        <input type="text" class="form-control" formControlName="nameOfOrganisation">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Role Description</label>
+                        <input type="text" class="form-control" formControlName="descriptionOfRole">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
+                        {{rolesDropDown}}
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li *ngFor="let r of roles"><a (click)="onRolesDropDownSelect(r.roleName)">{{r.roleName}}</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Skype</label>
+                        <input type="email" class="form-control" formControlName="skypeId">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Gtalk</label>
+                        <input type="email" class="form-control" formControlName="gtalk">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Address</label>
+                        <input type="text" class="form-control">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-group label-floating is-empty">
+                          <label class="control-label">Description</label>
+                          <textarea class="form-control" rows="5" formControlName="gtalk"></textarea>
+                          <span class="material-input"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="student">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">First name</label>
+                        <input type="text" class="form-control" formControlName="firstname">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Last name</label>
+                        <input type="text" class="form-control" formControlName="lastname">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Email address</label>
+                        <input type="email" class="form-control" formControlName="email">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown">
+                        {{rolesDropDown}}
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li *ngFor="let r of roles"><a (click)="onRolesDropDownSelect(r.roleName)">{{r.roleName}}</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Skype</label>
+                        <input type="email" class="form-control" formControlName="skypeId">
+                        <span class="material-input"></span></div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Gtalk</label>
+                        <input type="email" class="form-control" formControlName="gtalk">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group label-floating is-empty">
+                        <label class="control-label">Address</label>
+                        <input type="text" class="form-control">
+                        <span class="material-input"></span></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="form-group label-floating is-empty">
+                          <label class="control-label">Description</label>
+                          <textarea class="form-control" rows="5" formControlName="gtalk"></textarea>
+                          <span class="material-input"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

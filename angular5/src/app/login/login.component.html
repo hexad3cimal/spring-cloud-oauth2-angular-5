@@ -1,0 +1,39 @@
+<div class="main-panel">
+  <navbar></navbar>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header" data-background-color="purple">
+              <h4 class="title">LOGIN</h4>
+              <p class="category">Login to your account</p>
+            </div>
+            <div class="card-content">
+              <form  (ngSubmit)="processLogin(login)" #loginForm="ngForm">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group label-floating is-empty">
+                      <label class="control-label">Username</label>
+                      <input type="text" name="username" class="form-control" [(ngModel)]="username">
+                      <span class="material-input"></span></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group label-floating is-empty">
+                      <label class="control-label">Password</label>
+                      <input type="text" name = "password" class="form-control" [(ngModel)]="password">
+                      <span class="material-input"></span></div>
+                  </div>
+                </div>
+               <button type="submit" class="btn btn-primary pull-right">Login</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="purple">
+            <h4 class="title">Simple Table</h4>
+            <p class="category">Here is a subtitle for this table</p>
+          </div>
+          <div class="card-content table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+              <tr><th>Name</th>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Active</th>
+              </tr></thead>
+              <tbody>
+              <tr *ngFor="let u of users">
+                <td>{{u.userDetailses[0].firstname}} {{u.userDetailses[0].lastname}}</td>
+                <td>{{u.userRoleses[0].roles.roleName}}</td>
+                <td>{{u.userCode}}</td>
+                <td class="text-primary">{{u.isactive}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
